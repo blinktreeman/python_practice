@@ -19,3 +19,7 @@ for i in range(count-1):
     current_fibo *= (-1)**(i+1)
     fibo_list.insert(0, current_fibo)
 print('Список чисел Фибоначчи {}' .format(fibo_list))
+
+# Output:
+# Задайте количество чисел Фибоначчи 8
+# Список чисел Фибоначчи [-21, 13, -8, 5, -3, 2, -1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
