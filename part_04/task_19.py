@@ -12,7 +12,7 @@ init_number = int(input('Задайте целое число '))
 # Все множители
 list_mult = [i for i in range(1, init_number) if not init_number%i]
 # Простые числа в list_mult
-list_prime = list(filter(lambda e: prime_number(e), list_mult))
+list_prime = [i for i in list_mult if prime_number(i)]
 
 print('Простые множители числа {}: {}' .format(init_number, list_prime))
 
