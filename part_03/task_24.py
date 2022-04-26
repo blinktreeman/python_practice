@@ -26,14 +26,12 @@ def freq_dictionary(a, b, count=1000):
 
     Частотный словарь для my_random
     """
-    dict = {}
-    for i in range(a, b):
-        dict[i] = 0
+    freq_dict = {i: 0 for i in range(a, b)}
     for i in range(count):
-        dict[my_random(a, b)] += 1
+        freq_dict[my_random(a, b)] += 1
     for i in range(a, b):
-        dict[i] = f'{dict[i] * 100 / count}%'
-    print(dict)
+        freq_dict[i] = f'{freq_dict[i] * 100 / count}%'
+    print(freq_dict)
 
 
 freq_dictionary(0, 10)
