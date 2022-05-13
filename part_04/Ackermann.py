@@ -10,13 +10,14 @@ def Ackermann(m, n):
     if m == 0:
         return n + 1
     elif m > 0 and n == 0:
-        thread = Thread(target=Ackermann, args=(m - 1, 1))
-        thread.start()
-        res = thread.get()
-        return res
+        #thread = Thread(target=Ackermann, args=(m - 1, 1))
+        #thread.start()
+        #res = thread.get()
+        return Ackermann(m - 1, 1)
     elif m > 0 and n > 0:
         temp = m
         n = Ackermann(m, n - 1)
         return Ackermann(temp - 1, n)
 
-print(Ackermann(3, 5))
+
+print(Ackermann(5, 0))
