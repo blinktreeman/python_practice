@@ -33,11 +33,10 @@ def line_done():
 
 def clicked(event):
     global player
-    print(event.x, event.y)
     x = event.x // 100 * 100
     y = event.y // 100 * 100
     position = str(event.y // 100) + str(event.x // 100)
-    if game_dict[position] == 0:
+    if game_dict[position] == 0 and not line_done():
         if player == 1:
             game_canvas.create_line(x + 20, y + 20, x + 80, y + 80, width=5, fill='red')
             game_canvas.create_line(x + 20, y + 80, x + 80, y + 20, width=5, fill='red')
